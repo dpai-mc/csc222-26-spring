@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>CSC222: Programming and Algorithms II Syllabus</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2c3e50; }
+    .week-section { border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; }
+    .week-header { background: #f4f4f4; padding: 10px; cursor: pointer; }
+    .week-content { display: none; padding: 10px; }
+    .links a { display: block; color: #2980b9; text-decoration: none; margin: 5px 0; }
+    .links a:hover { text-decoration: underline; }
+</style>
+<script>
+function toggleContent(id) {
+    var content = document.getElementById(id);
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</head>
+<body>
+<h1>CSC222: Programming and Algorithms II</h1>
+<p>This course focuses on software engineering techniques, data structures (arrays, records, strings, linked lists, stacks, queues, hash tables), recursion, and object-oriented programming concepts. Students will learn to design, implement, test, and debug programs using modern object-oriented languages.</p>
+
+    <div class='week-section'>
+        <div class='week-header' onclick="toggleContent('content0')">Weeks 1-2: Transition from Java to C++</div>
+        <div class='week-content' id='content0'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Understand differences between Java and C++ syntax and semantics</li><li>Translate basic Java constructs into C++</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Basics</a><a href='https://www.cplusplus.com/doc/tutorial/' target='_blank'>C++ Tutorial</a><a href='https://www.geeksforgeeks.org/difference-between-java-and-c/' target='_blank'>Java vs C++</a></div></div></div>
+    <div class='week-section'>
+        <div class='week-header' onclick="toggleContent('content1')">Week 3: Functions and Parameter Passing</div>
+        <div class='week-content' id='content1'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Implement functions in C++</li><li>Understand pass-by-value vs pass-by-reference</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Functions</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Unit 1</a></div></div></div>
+    <div class='week-section'>
+        <div class='week-header' onclick="toggleContent('content2')">Week 4: Arrays and Strings</div>
+        <div class='week-content' id='content2'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Work with arrays and C-style strings</li><li>Explore dynamic memory allocation</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Arrays</a><a href='https://cplusplus.com/reference/string/string/' target='_blank'>C++ Strings</a><a href='https://www.learncpp.com/' target='_blank'>LearnCpp</a></div></div></div></body></html>
