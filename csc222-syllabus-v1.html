@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>CSC222: Programming and Algorithms II Syllabus</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; display: flex; }
+    .sidebar { width: 250px; background: #2c3e50; color: white; padding: 20px; height: 100vh; position: fixed; overflow-y: auto; }
+    .sidebar a { color: white; text-decoration: none; display: block; margin: 10px 0; }
+    .sidebar a:hover { text-decoration: underline; }
+    .content { margin-left: 270px; padding: 20px; width: calc(100% - 270px); }
+    h1 { color: #2c3e50; }
+    .week-section { border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; }
+    .week-header { background: #f4f4f4; padding: 10px; cursor: pointer; font-weight: bold; }
+    .week-content { display: none; padding: 10px; }
+    .links a { display: block; color: #2980b9; text-decoration: none; margin: 5px 0; }
+    .links a:hover { text-decoration: underline; }
+</style>
+<script>
+function toggleContent(id) {
+    var content = document.getElementById(id);
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</head>
+<body>
+<div class='sidebar'>
+<h2>Weeks</h2>
+<a href='#week0'>Weeks 1-2</a><a href='#week1'>Week 3</a><a href='#week2'>Week 4</a><a href='#week3'>Week 5</a><a href='#week4'>Week 6</a><a href='#week5'>Week 7</a><a href='#week6'>Week 8</a><a href='#week7'>Week 9</a><a href='#week8'>Week 10</a><a href='#week9'>Week 11</a><a href='#week10'>Week 12</a><a href='#week11'>Week 13</a><a href='#week12'>Week 14</a><a href='#week13'>Week 15</a><a href='#week14'>Week 16</a></div><div class='content'><h1>CSC222: Programming and Algorithms II</h1><p>This course focuses on software engineering techniques, data structures (arrays, records, strings, linked lists, stacks, queues, hash tables), recursion, and object-oriented programming concepts. Students will learn to design, implement, test, and debug programs using modern object-oriented languages.</p>
+    <div class='week-section' id='week0'>
+        <div class='week-header' onclick="toggleContent('content0')">Weeks 1-2: Transition from Java to C++</div>
+        <div class='week-content' id='content0'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Set up C++ development environment</li><li>Compare Java and C++ syntax and semantics</li><li>Translate Java loops and conditionals to C++</li><li>Understand memory management differences</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Basics</a><a href='https://www.cplusplus.com/doc/tutorial/' target='_blank'>C++ Tutorial</a><a href='https://www.geeksforgeeks.org/difference-between-java-and-c/' target='_blank'>Java vs C++</a></div></div></div>
+    <div class='week-section' id='week1'>
+        <div class='week-header' onclick="toggleContent('content1')">Week 3: Functions and Parameter Passing</div>
+        <div class='week-content' id='content1'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Define and call functions in C++</li><li>Understand pass-by-value vs pass-by-reference</li><li>Use default arguments and inline functions</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Functions</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Unit 1</a></div></div></div>
+    <div class='week-section' id='week2'>
+        <div class='week-header' onclick="toggleContent('content2')">Week 4: Arrays and Strings</div>
+        <div class='week-content' id='content2'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Declare and manipulate arrays</li><li>Work with C-style strings</li><li>Explore dynamic memory allocation</li><li>Use std::string class</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Arrays</a><a href='https://cplusplus.com/reference/string/string/' target='_blank'>C++ Strings</a><a href='https://www.learncpp.com/' target='_blank'>LearnCpp</a></div></div></div>
+    <div class='week-section' id='week3'>
+        <div class='week-header' onclick="toggleContent('content3')">Week 5: Records and Structs</div>
+        <div class='week-content' id='content3'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Define structs and access members</li><li>Compare structs and classes</li><li>Use typedef and struct arrays</li></ul><h3>Resources:</h3><div class='links'><a href='https://open.umn.edu/opentextbooks/textbooks/programming-fundamentals' target='_blank'>Programming Fundamentals</a><a href='https://www.learncpp.com/cpp-tutorial/structs/' target='_blank'>LearnCpp Structs</a></div></div></div>
+    <div class='week-section' id='week4'>
+        <div class='week-header' onclick="toggleContent('content4')">Week 6: Object-Oriented Programming in C++</div>
+        <div class='week-content' id='content4'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Create classes with constructors and destructors</li><li>Implement encapsulation and data hiding</li><li>Use access specifiers and member functions</li></ul><h3>Resources:</h3><div class='links'><a href='https://greenteapress.com/wp/think-java/' target='_blank'>Think Java (adapt to C++)</a><a href='https://openlibra.com' target='_blank'>OpenLibra OOP</a></div></div></div>
+    <div class='week-section' id='week5'>
+        <div class='week-header' onclick="toggleContent('content5')">Week 7: Inheritance and Polymorphism</div>
+        <div class='week-content' id='content5'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Implement inheritance in C++</li><li>Use virtual functions and polymorphism</li><li>Understand abstract classes</li></ul><h3>Resources:</h3><div class='links'><a href='https://www.learncpp.com/' target='_blank'>LearnCpp OOP</a><a href='https://openlibra.com' target='_blank'>OpenLibra Advanced OOP</a></div></div></div>
+    <div class='week-section' id='week6'>
+        <div class='week-header' onclick="toggleContent('content6')">Week 8: Recursion</div>
+        <div class='week-content' id='content6'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Write recursive functions</li><li>Analyze recursion vs iteration</li><li>Apply recursion to sorting algorithms</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Recursion</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Recursion</a></div></div></div>
+    <div class='week-section' id='week7'>
+        <div class='week-header' onclick="toggleContent('content7')">Week 9: Linked Lists</div>
+        <div class='week-content' id='content7'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Implement singly linked lists</li><li>Implement doubly linked lists</li><li>Perform insertion and deletion</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Linked Lists</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Linked Lists</a></div></div></div>
+    <div class='week-section' id='week8'>
+        <div class='week-header' onclick="toggleContent('content8')">Week 10: Stacks and Queues</div>
+        <div class='week-content' id='content8'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Implement stacks using arrays and linked lists</li><li>Implement queues and circular queues</li><li>Understand applications of stacks and queues</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Stacks and Queues</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Stacks and Queues</a></div></div></div>
+    <div class='week-section' id='week9'>
+        <div class='week-header' onclick="toggleContent('content9')">Week 11: Hash Tables</div>
+        <div class='week-content' id='content9'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Understand hashing and collision resolution</li><li>Implement hash tables</li><li>Analyze hash table performance</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Hash Tables</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Hash Tables</a></div></div></div>
+    <div class='week-section' id='week10'>
+        <div class='week-header' onclick="toggleContent('content10')">Week 12: Trees</div>
+        <div class='week-content' id='content10'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Implement binary trees</li><li>Perform tree traversals</li><li>Understand AVL trees</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Trees</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Trees</a></div></div></div>
+    <div class='week-section' id='week11'>
+        <div class='week-header' onclick="toggleContent('content11')">Week 13: Graphs</div>
+        <div class='week-content' id='content11'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Represent graphs using adjacency lists</li><li>Implement BFS and DFS</li><li>Analyze graph algorithms</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Graphs</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Graphs</a></div></div></div>
+    <div class='week-section' id='week12'>
+        <div class='week-header' onclick="toggleContent('content12')">Week 14: Algorithm Analysis</div>
+        <div class='week-content' id='content12'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Apply Big-O notation</li><li>Analyze time and space complexity</li><li>Compare algorithm efficiency</li></ul><h3>Resources:</h3><div class='links'><a href='https://opendsa.org' target='_blank'>OpenDSA Algorithm Analysis</a><a href='https://learn.saylor.org/course/view.php?id=74' target='_blank'>Saylor CS202 Complexity</a></div></div></div>
+    <div class='week-section' id='week13'>
+        <div class='week-header' onclick="toggleContent('content13')">Week 15: Software Engineering Practices</div>
+        <div class='week-content' id='content13'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Apply modular design principles</li><li>Use debugging techniques</li><li>Implement unit testing with Catch2</li><li>Understand version control with Git</li></ul><h3>Resources:</h3><div class='links'><a href='https://softwareengineering.libretexts.org/' target='_blank'>LibreTexts Software Engineering</a><a href='https://git-scm.com/book/en/v2' target='_blank'>Pro Git</a><a href='https://github.com/catchorg/Catch2' target='_blank'>Catch2 Testing Framework</a></div></div></div>
+    <div class='week-section' id='week14'>
+        <div class='week-header' onclick="toggleContent('content14')">Week 16: Capstone Project</div>
+        <div class='week-content' id='content14'>
+            <h3>Objectives:</h3>
+            <ul>
+    <li>Design a complete program using multiple data structures</li><li>Document and present the solution</li><li>Apply best practices in software engineering</li></ul><h3>Resources:</h3><div class='links'><a href='https://github.com/fffaraz/awesome-cpp' target='_blank'>Awesome C++ Resources</a><a href='https://github.com/practical-tutorials/project-based-learning' target='_blank'>Project-Based Learning</a></div></div></div></div></body></html>
