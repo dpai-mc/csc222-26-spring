@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC222: Programming and Algorithms II - Syllabus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            border-bottom: 4px solid #1e3a8a;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .course-meta {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .course-meta strong {
+            color: #1e3a8a;
+        }
+
+        nav {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border-left: 4px solid #1e3a8a;
+        }
+
+        nav h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        nav ul {
+            list-style: none;
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        nav li {
+            margin-bottom: 8px;
+        }
+
+        nav a {
+            color: #1e3a8a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2d5a8c;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #3d6fa8;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .placeholder {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+            font-style: italic;
+            color: #92400e;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .policy-box {
+            background-color: #f3e8ff;
+            border-left: 4px solid #a855f7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            border: 1px solid #e5e7eb;
+            padding: 12px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        .week-section {
+            background-color: #f8fafb;
+            border-left: 4px solid #1e3a8a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .week-section h4 {
+            margin-top: 0;
+        }
+
+        .contact-card {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .contact-card strong {
+            color: #1e3a8a;
+        }
+
+        a {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome-message {
+            background-color: #dcfce7;
+            border-left: 4px solid #22c55e;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 3px;
+        }
+
+        .welcome-message p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e5e7eb;
+            text-align: center;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSC222: Programming and Algorithms II</h1>
+            <div class="course-meta">
+                <div><strong>Semester:</strong> <span class="placeholder">[PLACEHOLDER: Spring 2026]</span></div>
+                <div><strong>Meeting Times:</strong> <span class="placeholder">[PLACEHOLDER: Days, Times, Location]</span></div>
+                <div><strong>Mode of Delivery:</strong> <span class="placeholder">[PLACEHOLDER: In-person / Hybrid / Online]</span></div>
+                <div><strong>Units:</strong> <span class="placeholder">[PLACEHOLDER: X units]</span></div>
+            </div>
+        </header>
+
+        <div class="welcome-message">
+            <h3>Welcome to CSC222!</h3>
+            <p>I'm excited to have you in this course! Programming and Algorithms II is a comprehensive exploration of software engineering techniques, data structures, and object-oriented programming. Throughout this semester, we'll build skills that will serve you throughout your computer science career.</p>
+            <p><span class="placeholder">[PLACEHOLDER: Add your personal welcome message here—share your enthusiasm for the subject and what students can expect from you as an instructor.]</span></p>
+        </div>
+
+        <nav>
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#course-description">Course Description</a></li>
+                <li><a href="#instructor-info">Instructor Information</a></li>
+                <li><a href="#course-materials">Course Materials</a></li>
+                <li><a href="#student-outcomes">Learning Outcomes</a></li>
+                <li><a href="#course-calendar">Course Calendar</a></li>
+                <li><a href="#grading">Grading & Evaluation</a></li>
+                <li><a href="#expectations">Course Expectations</a></li>
+                <li><a href="#policies">Course Policies</a></li>
+                <li><a href="#resources">Student Resources</a></li>
+            </ul>
+        </nav>
+
+        <!-- COURSE DESCRIPTION -->
+        <section id="course-description">
+            <h2>Course Description and Purpose</h2>
+            
+            <h3>Course Description</h3>
+            <p>CSC222: Programming and Algorithms II focuses on software engineering techniques, data structures (arrays, records, strings, linked lists, stacks, queues, hash tables), recursion, and object-oriented programming concepts. Students will learn to design, implement, test, and debug programs using modern object-oriented languages. This course builds on fundamental programming concepts and prepares students for advanced computer science coursework.</p>
+
+            <h3>Why This Course?</h3>
+            <p>Understanding data structures and algorithms is essential for every computer science professional. In this course, you'll develop the skills to write efficient, well-organized code that can handle real-world problems. Whether you're pursuing a career in software development, systems programming, or data science, the concepts you master here will directly apply to your work. Beyond the technical skills, you'll learn how to think algorithmically—to break down complex problems and design elegant solutions.</p>
+        </section>
+
+        <!-- INSTRUCTOR INFORMATION -->
+        <section id="instructor-info">
+            <h2>Instructor Information</h2>
+            
+            <div class="contact-card">
+                <h3>Contact Information</h3>
+                <p><strong>Instructor:</strong> <span class="placeholder">[PLACEHOLDER: Your Name]</span></p>
+                <p><strong>Email:</strong> <span class="placeholder">[PLACEHOLDER: your.email@mendocino.edu]</span></p>
+                <p><strong>Office Location:</strong> <span class="placeholder">[PLACEHOLDER: Building and Room Number]</span></p>
+                <p><strong>Student Hours:</strong> <span class="placeholder">[PLACEHOLDER: Days and Times - I highly encourage you to attend!]</span></p>
+                <p><strong>How to Reach Me:</strong> <span class="placeholder">[PLACEHOLDER: Email response timeframe, preferred communication method, etc.]</span></p>
+            </div>
+
+            <h3>About Your Instructor</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Share a brief bio here. Include your relevant background, education, professional experience, and what you love about teaching this subject. Let students know you're a real person who cares about their success!]</span></p>
+
+            <h3>My Teaching Philosophy</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Share your approach to teaching and learning. For example: "I believe students learn best when they are actively engaged in problem-solving. I create a classroom environment where questions are encouraged, mistakes are learning opportunities, and collaboration strengthens our collective understanding."]</span></p>
+        </section>
+
+        <!-- COURSE MATERIALS -->
+        <section id="course-materials">
+            <h2>Required Course Materials and Resources</h2>
+
+            <h3>Textbooks</h3>
+            <div class="placeholder">
+                [PLACEHOLDER: List any required or recommended textbooks, including:]
+                <ul>
+                    <li>Title and Author</li>
+                    <li>ISBN</li>
+                    <li>Whether it's required or optional</li>
+                    <li>Estimated cost or where to purchase</li>
+                </ul>
+            </div>
+
+            <h3>Software and Tools</h3>
+            <div class="highlight-box">
+                <h4>Required Software:</h4>
+                <ul>
+                    <li>C++ Compiler (GCC or Clang) - Free</li>
+                    <li>Code Editor or IDE: <span class="placeholder">[PLACEHOLDER: Visual Studio Code, CLion, or other - specify if free or requires purchase]</span></li>
+                    <li>Git for version control - Free (recommended)</li>
+                    <li><span class="placeholder">[PLACEHOLDER: Add any other required software]</span></li>
+                </ul>
+            </div>
+
+            <h3>Technology Requirements</h3>
+            <p>To succeed in this course, you'll need:</p>
+            <ul>
+                <li>A personal computer (Windows, Mac, or Linux) capable of running a C++ development environment</li>
+                <li>Reliable internet access for accessing course materials and submitting assignments</li>
+                <li>A text editor or Integrated Development Environment (IDE) of your choice</li>
+                <li><span class="placeholder">[PLACEHOLDER: Any other technology requirements specific to your teaching approach]</span></li>
+            </ul>
+
+            <h3>Open Educational Resources (OER)</h3>
+            <p>This course makes extensive use of free, open-access resources to support your learning:</p>
+            <ul>
+                <li><a href="https://opendsa.org" target="_blank">OpenDSA</a> - Interactive visualizations of data structures and algorithms</li>
+                <li><a href="https://www.cplusplus.com" target="_blank">cplusplus.com</a> - C++ language reference and tutorials</li>
+                <li><a href="https://www.learncpp.com" target="_blank">LearnCpp.com</a> - Comprehensive C++ learning resource</li>
+                <li><a href="https://github.com/fffaraz/awesome-cpp" target="_blank">Awesome C++</a> - Curated list of C++ resources and libraries</li>
+                <li><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git</a> - Free book on version control</li>
+            </ul>
+
+            <h3>Course Obligations</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Note any unusual course requirements such as field trips, proctored exams, public performances, or group presentations. If none, you can delete this section.]</span></p>
+        </section>
+
+        <!-- STUDENT LEARNING OUTCOMES -->
+        <section id="student-outcomes">
+            <h2>Course Level Student Learning Outcomes (CSLOs)</h2>
+            
+            <p>By the end of this course, students will be able to:</p>
+            
+            <div class="highlight-box">
+                <ol>
+                    <li><span class="placeholder">[PLACEHOLDER: CSLO 1 - Verbatim from Course Outline of Record]</span></li>
+                    <li><span class="placeholder">[PLACEHOLDER: CSLO 2 - Verbatim from Course Outline of Record]</span></li>
+                    <li><span class="placeholder">[PLACEHOLDER: CSLO 3 - Verbatim from Course Outline of Record]</span></li>
+                    <li><span class="placeholder">[PLACEHOLDER: CSLO 4 - Verbatim from Course Outline of Record]</span></li>
+                    <li><span class="placeholder">[PLACEHOLDER: Add more CSLOs as needed]</span></li>
+                </ol>
+            </div>
+
+            <p><strong>Note:</strong> These outcomes have been identified in our Course Outline of Record. Throughout the semester, various assignments, projects, and assessments will give you opportunities to demonstrate your mastery of these outcomes.</p>
+        </section>
+
+        <!-- COURSE CALENDAR -->
+        <section id="course-calendar">
+            <h2>Course Calendar and Schedule of Topics</h2>
+
+            <div class="policy-box">
+                <h3>Important Dates</h3>
+                <p><strong>Last Day to Drop Without a "W":</strong> <span class="placeholder">[PLACEHOLDER: Date]</span></p>
+                <p><strong>Last Day to Drop with a "W":</strong> <span class="placeholder">[PLACEHOLDER: Date]</span></p>
+                <p><strong>Last Day to Select P/NP Grading:</strong> <span class="placeholder">[PLACEHOLDER: Date]</span></p>
+                <p><strong>Final Exam Date:</strong> <span class="placeholder">[PLACEHOLDER: Date and Time]</span></p>
+            </div>
+
+            <h3>Weekly Topics and Schedule</h3>
+
+            <div class="week-section">
+                <h4>Weeks 1-2: Transition from Java to C++</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Set up C++ development environment</li>
+                    <li>Compare Java and C++ syntax and semantics</li>
+                    <li>Translate Java loops and conditionals to C++</li>
+                    <li>Understand memory management differences</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Development environment setup, basic syntax, data types, control structures, memory fundamentals</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Basics</a>, <a href="https://www.cplusplus.com/doc/tutorial/" target="_blank">C++ Tutorial</a>, <a href="https://www.geeksforgeeks.org/difference-between-java-and-c/" target="_blank">Java vs C++</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 3: Functions and Parameter Passing</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Define and call functions in C++</li>
+                    <li>Understand pass-by-value vs pass-by-reference</li>
+                    <li>Use default arguments and inline functions</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Function definition, function calls, parameter passing mechanisms, scope, recursion basics</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Functions</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Unit 1</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 4: Arrays and Strings</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Declare and manipulate arrays</li>
+                    <li>Work with C-style strings</li>
+                    <li>Explore dynamic memory allocation</li>
+                    <li>Use std::string class</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Array operations, string manipulation, pointers, dynamic memory, std::string</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Arrays</a>, <a href="https://cplusplus.com/reference/string/string/" target="_blank">C++ Strings</a>, <a href="https://www.learncpp.com/" target="_blank">LearnCpp</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 5: Records and Structs</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Define structs and access members</li>
+                    <li>Compare structs and classes</li>
+                    <li>Use typedef and struct arrays</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Struct definition, member access, composite data types, typedef</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://open.umn.edu/opentextbooks/textbooks/programming-fundamentals" target="_blank">Programming Fundamentals</a>, <a href="https://www.learncpp.com/cpp-tutorial/structs/" target="_blank">LearnCpp Structs</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 6: Object-Oriented Programming in C++</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Create classes with constructors and destructors</li>
+                    <li>Implement encapsulation and data hiding</li>
+                    <li>Use access specifiers and member functions</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Class design, constructors, destructors, encapsulation, access specifiers</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://greenteapress.com/wp/think-java/" target="_blank">Think Java (adapt to C++)</a>, <a href="https://openlibra.com" target="_blank">OpenLibra OOP</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 7: Inheritance and Polymorphism</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Implement inheritance in C++</li>
+                    <li>Use virtual functions and polymorphism</li>
+                    <li>Understand abstract classes</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Inheritance, virtual functions, polymorphism, abstract classes</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://www.learncpp.com/" target="_blank">LearnCpp OOP</a>, <a href="https://openlibra.com" target="_blank">OpenLibra Advanced OOP</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 8: Recursion</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Write recursive functions</li>
+                    <li>Analyze recursion vs iteration</li>
+                    <li>Apply recursion to sorting algorithms</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Recursive function design, base cases, recursion analysis, recursive algorithms</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Recursion</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Recursion</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 9: Linked Lists</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Implement singly linked lists</li>
+                    <li>Implement doubly linked lists</li>
+                    <li>Perform insertion and deletion</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Node structures, pointer manipulation, list traversal, insertion, deletion</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Linked Lists</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Linked Lists</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 10: Stacks and Queues</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Implement stacks using arrays and linked lists</li>
+                    <li>Implement queues and circular queues</li>
+                    <li>Understand applications of stacks and queues</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Stack operations (push, pop), queue operations (enqueue, dequeue), circular queues, applications</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Stacks and Queues</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Stacks and Queues</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 11: Hash Tables</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Understand hashing and collision resolution</li>
+                    <li>Implement hash tables</li>
+                    <li>Analyze hash table performance</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Hash functions, collision resolution, hash table implementation, performance analysis</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Hash Tables</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Hash Tables</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 12: Trees</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Implement binary trees</li>
+                    <li>Perform tree traversals</li>
+                    <li>Understand AVL trees</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Tree structures, binary trees, tree traversals (inorder, preorder, postorder), balanced trees</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Trees</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Trees</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 13: Graphs</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Represent graphs using adjacency lists</li>
+                    <li>Implement BFS and DFS</li>
+                    <li>Analyze graph algorithms</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Graph representations, breadth-first search, depth-first search, graph traversal</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Graphs</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Graphs</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 14: Algorithm Analysis</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Apply Big-O notation</li>
+                    <li>Analyze time and space complexity</li>
+                    <li>Compare algorithm efficiency</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Asymptotic notation, time complexity, space complexity, complexity analysis</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://opendsa.org" target="_blank">OpenDSA Algorithm Analysis</a>, <a href="https://learn.saylor.org/course/view.php?id=74" target="_blank">Saylor CS202 Complexity</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 15: Software Engineering Practices</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Apply modular design principles</li>
+                    <li>Use debugging techniques</li>
+                    <li>Implement unit testing with Catch2</li>
+                    <li>Understand version control with Git</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Code organization, debugging, unit testing, version control, code documentation</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify any assignments due]</span></p>
+                <p><strong>Resources:</strong> <a href="https://softwareengineering.libretexts.org/" target="_blank">LibreTexts Software Engineering</a>, <a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git</a>, <a href="https://github.com/catchorg/Catch2" target="_blank">Catch2 Testing Framework</a></p>
+            </div>
+
+            <div class="week-section">
+                <h4>Week 16: Capstone Project</h4>
+                <p><strong>Objectives:</strong></p>
+                <ul>
+                    <li>Design a complete program using multiple data structures</li>
+                    <li>Document and present the solution</li>
+                    <li>Apply best practices in software engineering</li>
+                </ul>
+                <p><strong>Key Topics:</strong> Project design, integration of concepts, presentation, code review</p>
+                <p><strong>Assignments Due:</strong> <span class="placeholder">[PLACEHOLDER: Specify final project due date and presentation schedule]</span></p>
+                <p><strong>Resources:</strong> <a href="https://github.com/fffaraz/awesome-cpp" target="_blank">Awesome C++ Resources</a>, <a href="https://github.com/practical-tutorials/project-based-learning" target="_blank">Project-Based Learning</a></p>
+            </div>
+        </section>
+
+        <!-- GRADING & EVALUATION -->
+        <section id="grading">
+            <h2>Methods of Evaluation and Grading</h2>
+
+            <h3>Grading Breakdown</h3>
+            <p>Your final grade will be determined by the following components:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Percentage</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="placeholder">[PLACEHOLDER: Assessment Type 1]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: X%]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: Description]</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="placeholder">[PLACEHOLDER: Assessment Type 2]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: X%]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: Description]</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="placeholder">[PLACEHOLDER: Assessment Type 3]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: X%]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: Description]</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="placeholder">[PLACEHOLDER: Assessment Type 4]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: X%]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: Description]</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="placeholder">[PLACEHOLDER: Add more rows as needed]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: X%]</span></td>
+                        <td><span class="placeholder">[PLACEHOLDER: Description]</span></td>
+                    </tr>
+                    <tr style="font-weight: bold; background-color: #e5e7eb;">
+                        <td>Total</td>
+                        <td>100%</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Grading Scale</h3>
+            <p>Your final grade will be assigned based on the following scale:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Percentage Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>90-100%</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>80-89%</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>70-79%</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>60-69%</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>Below 60%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Assignment Descriptions and Rubrics</h3>
+            <div class="placeholder">
+                <p><strong>[PLACEHOLDER: Assignment 1 Name]</strong></p>
+                <p>Purpose: [PLACEHOLDER: Explain what this assignment teaches and how it connects to course objectives]</p>
+                <p>Steps to Complete:</p>
+                <ol>
+                    <li>[PLACEHOLDER: Step 1]</li>
+                    <li>[PLACEHOLDER: Step 2]</li>
+                    <li>[PLACEHOLDER: Step 3]</li>
+                </ol>
+                <p>Grading Criteria: [PLACEHOLDER: Rubric or point breakdown]</p>
+            </div>
+
+            <div class="placeholder">
+                <p><strong>[PLACEHOLDER: Assignment 2 Name]</strong></p>
+                <p>Purpose: [PLACEHOLDER: Explain what this assignment teaches and how it connects to course objectives]</p>
+                <p>Steps to Complete:</p>
+                <ol>
+                    <li>[PLACEHOLDER: Step 1]</li>
+                    <li>[PLACEHOLDER: Step 2]</li>
+                    <li>[PLACEHOLDER: Step 3]</li>
+                </ol>
+                <p>Grading Criteria: [PLACEHOLDER: Rubric or point breakdown]</p>
+            </div>
+
+            <div class="placeholder">
+                <p><strong>[PLACEHOLDER: Add more assignments as needed]</strong></p>
+            </div>
+
+            <h3>How Assignments Connect to Learning Outcomes</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Create a table or narrative explaining how each assignment/assessment aligns with the course learning outcomes listed in the Student Learning Outcomes section.]</span></p>
+        </section>
+
+        <!-- COURSE EXPECTATIONS -->
+        <section id="expectations">
+            <h2>Course Expectations and How to Succeed</h2>
+
+            <h3>Time Commitment</h3>
+            <p>College courses typically require 2-3 hours of work outside the classroom for every 1 hour spent in class. For CSC222, you should expect to spend approximately <span class="placeholder">[PLACEHOLDER: X hours per week]</span> on reading, studying, completing assignments, and project work.</p>
+
+            <h3>Class Participation and Engagement</h3>
+            <p>Your success in this course depends on active engagement. This means:</p>
+            <ul>
+                <li>Attending class consistently and arriving on time</li>
+                <li>Coming to class prepared, having completed any assigned readings or pre-work</li>
+                <li>Participating in discussions and group activities</li>
+                <li>Asking questions when you don't understand something</li>
+                <li>Helping your classmates and building a supportive learning community</li>
+                <li><span class="placeholder">[PLACEHOLDER: Add any other participation expectations specific to your teaching approach]</span></li>
+            </ul>
+
+            <h3>Our Learning Pact</h3>
+            <div class="highlight-box">
+                <h4>What You Can Expect From Me:</h4>
+                <ul>
+                    <li>Clear explanations of difficult concepts and patience when repeating them</li>
+                    <li>Engaging lessons that help you see real-world applications of programming concepts</li>
+                    <li>Timely feedback on your work (typically within <span class="placeholder">[PLACEHOLDER: X business days]</span>)</li>
+                    <li>Availability during student hours and responsiveness to emails within <span class="placeholder">[PLACEHOLDER: X hours/days]</span></li>
+                    <li>A classroom environment free from discrimination and harassment</li>
+                    <li>Flexibility and support when you face challenges</li>
+                    <li><span class="placeholder">[PLACEHOLDER: Add more commitments you make to students]</span></li>
+                </ul>
+
+                <h4>What I Expect From You:</h4>
+                <ul>
+                    <li>Attendance and punctuality—your presence matters and contributes to our class culture</li>
+                    <li>Professional respect toward me and your classmates, both in person and online</li>
+                    <li>Engagement with course materials and assignments—don't just show up, participate!</li>
+                    <li>Academic integrity—do your own work and give credit to others' ideas</li>
+                    <li>Communication if you're struggling—reach out before you fall behind</li>
+                    <li>Understanding that mistakes are part of learning—don't be afraid to ask questions</li>
+                    <li><span class="placeholder">[PLACEHOLDER: Add more expectations you have]</span></li>
+                </ul>
+            </div>
+
+            <h3>Suggestions for Success</h3>
+            <p>Here's what successful students in this course do:</p>
+            <ul>
+                <li><strong>Start assignments early.</strong> Don't wait until the last day to begin. These programming assignments take time to debug and refine.</li>
+                <li><strong>Practice, practice, practice.</strong> Programming is a skill learned by doing. Write code regularly, even outside of assignments.</li>
+                <li><strong>Read the resources.</strong> The OpenDSA visualizations and online tutorials will deepen your understanding beyond what we cover in class.</li>
+                <li><strong>Use office hours.</strong> Whether you're struggling or excelling, office hours are a great place to ask questions and discuss ideas.</li>
+                <li><strong>Form study groups.</strong> Explaining concepts to peers is one of the best ways to solidify your own understanding.</li>
+                <li><strong>Test your code thoroughly.</strong> Good programmers test edge cases and write test cases before they complete assignments.</li>
+                <li><strong>Review feedback carefully.</strong> When I return your work, read my comments. They're designed to help you improve.</li>
+                <li><strong>Don't compare yourself to others.</strong> Everyone learns at their own pace. Focus on your own progress.</li>
+                <li><span class="placeholder">[PLACEHOLDER: Add any other tips specific to your teaching approach]</span></li>
+            </ul>
+        </section>
+
+        <!-- COURSE POLICIES -->
+        <section id="policies">
+            <h2>Course and College Policies</h2>
+
+            <h3>Late Work and Make-Up Assignments</h3>
+            <div class="policy-box">
+                <p><span class="placeholder">[PLACEHOLDER: Describe your policy on late work. For example: "Assignments submitted within 24 hours of the due date will receive a 10% penalty. Assignments more than 48 hours late will receive a 25% penalty. Assignments submitted more than one week late will not be accepted unless you have documented circumstances and prior approval from me."]</span></p>
+                <p><span class="placeholder">[PLACEHOLDER: Describe your policy on make-up exams and assignments due to illness, emergency, or other documented circumstances.]</span></p>
+            </div>
+
+            <h3>Attendance Policy</h3>
+            <div class="policy-box">
+                <p>Because the discussions and activities we have during class are essential for understanding the material, students are expected to attend class regularly and arrive on time. Your presence contributes to our classroom community.</p>
+                <p><strong>Drop for Non-Attendance:</strong> In accordance with Mendocino College policy, a student may be considered excessively absent and may be dropped from class when cumulative absences exceed the total number of hours that the class meets during a week. <span class="placeholder">[PLACEHOLDER: For a class meeting X hours per week, this means you can miss no more than X hours per week before risking being dropped.]</span> If you must miss class, please communicate with me as soon as possible.</p>
+            </div>
+
+            <h3>Disability Accommodations</h3>
+            <div class="policy-box">
+                <p><strong>Mendocino College Commitment to Accessibility:</strong> The College is committed to creating a learning environment that meets the needs of its diverse student body. If you anticipate or experience any barriers to learning in this course, please feel welcome to discuss your concerns with me. If you have a disability, or think you may have a disability, you may also want to meet with a Counselor at the Disability Resource Center to begin this conversation or request an official accommodation.</p>
+                <p><strong>Disability Resource Center Contact Information:</strong></p>
+                <ul>
+                    <li>Phone: (707) 468-3031</li>
+                    <li>Email: Department-drc@mendocino.edu</li>
+                </ul>
+                <p>The staff at the Disability Resource Center can provide information about accommodations, assistive technology, and support services available to you.</p>
+            </div>
+
+            <h3>Academic Honesty</h3>
+            <div class="policy-box">
+                <p>You can succeed in this class through your own effort. Do not endanger your success by engaging in academic dishonesty. Academic honesty is a fundamental expectation in higher education. Violations include, but are not limited to:</p>
+                <ul>
+                    <li>Submitting work that is not your own</li>
+                    <li>Copying code from other sources without attribution</li>
+                    <li>Allowing others to submit your work</li>
+                    <li>Using unauthorized resources during exams</li>
+                    <li>Plagiarizing ideas, code, or writing without proper citation</li>
+                </ul>
+                <p>For a full description of the College's Academic Honesty Policy, please see the <strong>College Catalog</strong> and contact the <strong>Instruction Office at (707) 468-3002</strong> if you have questions.</p>
+            </div>
+
+            <h3>Artificial Intelligence Policy</h3>
+            <div class="policy-box">
+                <p><span class="placeholder">[PLACEHOLDER: Choose one of the following or create your own AI policy:]</span></p>
+                
+                <p><strong>Option 1 (Restricted Use):</strong> Students in this class may not use AI tools, such as ChatGPT, in developing or completing their class assignments. The assignments in this class are designed to help students master the course content and develop relevant programming skills. Using AI to generate code would undermine this learning and violate the academic honesty policy.</p>
+
+                <p><strong>Option 2 (Authorized Use):</strong> Students may use AI tools, such as ChatGPT, as specifically authorized by the instructor and all uses must be properly cited. We will discuss allowable uses in class. Students who use AI without authorization or to completely generate their assignments will be considered in violation of the college's Academic Honesty Policy. Examples of authorized use might include: brainstorming algorithm approaches, understanding error messages, or checking code syntax after you've written it yourself.</p>
+
+                <p><strong>Option 3 (Custom):</strong> <span class="placeholder">[PLACEHOLDER: Write your own AI usage policy aligned with your teaching philosophy]</span></p>
+            </div>
+
+            <h3>Financial Aid and Satisfactory Academic Progress</h3>
+            <div class="highlight-box">
+                <p>Don't miss out on available financial aid—visit <a href="https://www.mendocino.edu/financial-aid" target="_blank">https://www.mendocino.edu/financial-aid</a> to apply today!</p>
+                <p>To receive financial aid, you must meet the Satisfactory Academic Progress (SAP) requirements:</p>
+                <ul>
+                    <li>Maintain a minimum 2.0 GPA</li>
+                    <li>Successfully complete 67% of your coursework</li>
+                    <li>Graduate within 150% of the units required for your program</li>
+                </ul>
+                <p>If you do not maintain SAP, you may lose your financial aid. Students who do not meet satisfactory academic progress may appeal. Visit the <a href="https://www.mendocino.edu/financial-aid" target="_blank">Financial Aid Satisfactory Academic Progress website</a> for more information. If you have questions, please contact Financial Aid at <strong>financialaid@mendocino.edu</strong>.</p>
+            </div>
+
+            <h3>Eagle Connect Progress Monitoring</h3>
+            <div class="highlight-box">
+                <p><span class="placeholder">[PLACEHOLDER: Choose one of the sample Eagle Connect statements from the Mendocino guide above, or write your own. Example:]</span></p>
+                <p>I care about your success! This course is part of the Eagle Connect Student Success Network. I will use Eagle Connect to schedule my student office hours through the calendar feature (syncs to Outlook and Google) and use Eagle Connect email notifications to communicate with you about your academic progress. Throughout the term, you may receive notifications regarding your attendance and academic performance. To benefit, it is important that you check your Eagle Connect Dashboard or school email regularly and follow through on my recommended actions. You may also be contacted directly by a Retention Specialist or Counselor.</p>
+                <p><strong>How to Access Eagle Connect:</strong> Log into My Mendo, go to the Student Resources card, and click on Eagle Connect. You can set up a student profile. If you need assistance, use the "Raised Hand" feature on the top right-hand corner of your dashboard to connect with services Mendocino offers privately.</p>
+            </div>
+
+            <h3>Student Rights and Responsibilities</h3>
+            <div class="policy-box">
+                <p>As a Mendocino College student, you have rights and responsibilities. Your rights and responsibilities are listed in the College Catalog. Students are expected to behave in accordance with the Student Code of Conduct as outlined in AP 5500.1. If you have questions about your rights and responsibilities, please contact the Instruction Office at (707) 468-3002.</p>
+            </div>
+
+            <h3>Student Grievance Procedure</h3>
+            <div class="policy-box">
+                <p>If you feel your instructor has treated you unfairly, I encourage you to first discuss your concern with me directly. If the issue is not resolved, please read the <strong>Policy on Student Rights and Grievances</strong> and contact the <strong>Instruction Office at (707) 468-3002</strong> to be connected to the appropriate Dean who can assist you.</p>
+            </div>
+
+            <h3>Classroom Conduct and Mutual Respect</h3>
+            <div class="policy-box">
+                <h4>Respectful Learning Environment</h4>
+                <p>You are expected to treat your instructor and all other participants in the course with courtesy and respect. Your comments to each other should be factual, constructive, and free from harassing statements. You are encouraged to disagree with other students, but such disagreements need to be based on facts and documentation. It is my goal to promote an atmosphere of mutual respect in the classroom. Please contact me if you have suggestions for improving the classroom environment.</p>
+
+                <h4>Names and Gender Identity</h4>
+                <p>Class rosters are provided to me with students' legal names. I will gladly honor your request to address you by an alternate name or gender pronoun. Please let me know your preferences, and I will do my best to use them consistently. If I make a mistake, please let me know so I can correct it.</p>
+
+                <h4>Undocumented Students and Mixed-Status Families</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Choose one of the following statements or create your own:]</span></p>
+                <p><strong>Statement 1:</strong> I support undocumented students. Undocumented students face unique challenges. Mendocino College values diversity and is committed to provide equitable opportunities to grow as individuals and as a community. We welcome all students regardless of their immigration status.</p>
+                <p><strong>Statement 2:</strong> I am an UndocuAlly and am familiar with some of the challenges facing undocumented students and students of mixed-status families. I can provide resources both on-campus and off-campus to students seeking support. Feel free to talk with me about these resources.</p>
+            </div>
+
+            <h3>Technology and Course Management</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Add any statements about your use of Canvas, Eagle Connect, or other technology platforms. Example: "I will use Canvas as our primary platform for posting syllabus documents, assignment submissions, grades, and announcements. Check Canvas regularly for updates and due dates."]</span></p>
+
+            <h3>Course Communication Policy</h3>
+            <p><span class="placeholder">[PLACEHOLDER: Describe how you will communicate with students. Example: "I will respond to emails within 24 hours on weekdays and within 48 hours on weekends. For urgent matters, please speak with me before or after class. I will post announcements on Canvas about any changes to the schedule or policies."]</span></p>
+        </section>
+
+        <!-- STUDENT RESOURCES -->
+        <section id="resources">
+            <h2>Student Resources and Support Services</h2>
+
+            <p>Mendocino College offers a variety of resources to support your success. Don't hesitate to reach out—that's what these services are here for!</p>
+
+            <h3>Academic Support</h3>
+            <div class="highlight-box">
+                <h4>Learning Center</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Contact information for tutoring, writing center, or other academic support specific to your course]</span></p>
+
+                <h4>Math Tutoring</h4>
+                <p><span class="placeholder">[PLACEHOLDER: If relevant to your course, provide information about math tutoring resources]</span></p>
+
+                <h4>Computer Science/Programming Support</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Add information about any CS tutoring, coding help sessions, or programming lab support]</span></p>
+
+                <h4>Disability Resource Center</h4>
+                <p>Phone: (707) 468-3031<br>
+                Email: Department-drc@mendocino.edu<br>
+                The DRC provides accommodations, assistive technology, and support for students with documented disabilities.</p>
+            </div>
+
+            <h3>Student Well-Being and Mental Health</h3>
+            <div class="highlight-box">
+                <h4>Counseling Services</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Phone number and email for student counseling and mental health services]</span></p>
+                <p>Counselors can help with academic planning, stress management, personal concerns, and mental health support.</p>
+
+                <h4>Crisis Support</h4>
+                <p>If you're experiencing a crisis or having thoughts of self-harm, please reach out immediately:</p>
+                <ul>
+                    <li><strong>National Suicide Prevention Lifeline:</strong> 988 (available 24/7)</li>
+                    <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                </ul>
+            </div>
+
+            <h3>Financial Support</h3>
+            <div class="highlight-box">
+                <h4>Financial Aid</h4>
+                <p>Email: financialaid@mendocino.edu<br>
+                Website: <a href="https://www.mendocino.edu/financial-aid" target="_blank">https://www.mendocino.edu/financial-aid</a><br>
+                Financial aid advisors can help you navigate grants, loans, scholarships, and work-study opportunities.</p>
+
+                <h4>Food Bank</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Information about the student food bank and how to access it]</span></p>
+                <p>The student food bank is available to help students facing food insecurity. There's no shame in using this resource—you're not alone!</p>
+
+                <h4>Emergency Assistance</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Information about emergency grants or assistance for students facing unexpected hardship]</span></p>
+            </div>
+
+            <h3>Career and Transfer Support</h3>
+            <div class="highlight-box">
+                <h4>Career Services</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Contact information for career counseling, resume help, job search assistance, and internship opportunities]</span></p>
+
+                <h4>Transfer Services</h4>
+                <p><span class="placeholder">[PLACEHOLDER: Information about transfer services if students plan to move to a four-year institution]</span></p>
+            </div>
+
+            <h3>One-Stop Student Resources</h3>
+            <p>For a comprehensive list of campus resources and contact information, visit the <a href="https://www.mendocino.edu/student-resources" target="_blank">Student Resources page</a> on the Mendocino College website. This page includes information about:</p>
+            <ul>
+                <li>Academic support and tutoring</li>
+                <li>Mental health and counseling</li>
+                <li>Financial aid and emergency assistance</li>
+                <li>Library services</li>
+                <li>Technology and IT support</li>
+                <li>Housing and basic needs</li>
+                <li>Clubs, organizations, and activities</li>
+                <li>And much more!</li>
+            </ul>
+
+            <h3>How to Succeed Socially and Emotionally</h3>
+            <p>College is not just about academics—it's also about building connections and taking care of yourself:</p>
+            <ul>
+                <li><strong>Get involved.</strong> Join a club, organization, or study group. Building friendships makes college more enjoyable and helps you succeed.</li>
+                <li><strong>Use your resources.</strong> Counseling, tutoring, and support services are available because we want you to thrive.</li>
+                <li><strong>Talk to someone.</strong> If you're stressed, struggling, or just need to talk, reach out. Professors, counselors, and peers are here to listen.</li>
+                <li><strong>Take care of yourself.</strong> Sleep, nutrition, exercise, and time for hobbies are all important for academic success.</li>
+                <li><strong>Know it's okay to not be okay.</strong> Everyone struggles sometimes. That's normal, and there's help available.</li>
+            </ul>
+        </section>
+
+        <!-- CONCLUSION -->
+        <section id="conclusion">
+            <h2>Final Thoughts</h2>
+
+            <div class="welcome-message">
+                <p>I'm genuinely excited about teaching this course and getting to know you as learners and people. CSC222 is challenging but rewarding, and I believe you have the ability to succeed. My role is to guide you, challenge you, and support you along the way.</p>
+                <p>Remember: programming is learned by doing. You'll write a lot of code this semester, and some of it won't work at first—and that's perfectly fine. Debugging is part of programming, and learning from mistakes is how we grow.</p>
+                <p>I'm here for you. Please don't hesitate to reach out if you have questions, concerns, or just want to talk about your learning. Let's make this a great semester!</p>
+                <p><strong>Looking forward to working with you,</strong><br>
+                <span class="placeholder">[PLACEHOLDER: Your Name]</span></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>CSC222 Syllabus | Mendocino College | <span class="placeholder">[PLACEHOLDER: Semester/Year]</span></p>
+            <p>This syllabus is subject to change at the instructor's discretion. Students will be notified of any changes.</p>
+        </footer>
+    </div>
+</body>
+</html>
